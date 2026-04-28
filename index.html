@@ -10,18 +10,16 @@
   <style>
     :root {
       --plum:        #6B3E5E;
-      --plum-deep:   #351e2e; /* Más oscuro */
+      --plum-deep:   #351c2d; /* Más oscuro */
       --plum-soft:   #8F5A7A;
       --rosa:        #E8AABB;
       --rosa-pale:   #F5D9E2;
       --rosa-blush:  #FDF0F4;
       --cream:       #FBF7F4;
-      --text-dark:   #1A0F15; /* Más oscuro */
-      --text-mid:    #3d2934; /* Más oscuro */
-      --text-light:  #7a5f6c; /* Más oscuro */
+      --text-dark:   #1a0f15; /* Más oscuro */
+      --text-mid:    #4a2a3a; /* Más oscuro */
       --font: 'Cormorant Garamond', serif;
-      --max-w: 1000px; /* Reducido para mejorar centrado visual */
-      --pad-x: clamp(1.5rem, 5vw, 6rem);
+      --max-w: 900px; /* Reducido para mejorar legibilidad con texto centrado */
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -33,215 +31,183 @@
       color: var(--text-dark);
       overflow-x: hidden;
       font-size: 21px; /* Más grande */
-      line-height: 1.7;
-      text-align: center; /* Centrado global */
+      line-height: 1.6;
+      text-align: center; /* Centrado general */
     }
 
-    /* NAV  */
+    /* NAV */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.1rem var(--pad-x);
-      background: rgba(251, 247, 244, 0.92);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(107, 62, 94, 0.08);
+      justify-content: center;
+      padding: 1.1rem;
+      background: rgba(251, 247, 244, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(107, 62, 94, 0.1);
     }
-
     .nav-logo {
-      font-family: var(--font);
       font-size: 1.8rem;
-      font-weight: 600; /* Más ancho/negrita */
+      font-weight: 600;
       color: var(--plum);
       text-decoration: none;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 2.5rem;
-      list-style: none;
-    }
-    .nav-links a {
-      font-size: 1.15rem;
-      font-weight: 500;
-      color: var(--text-mid);
-      text-decoration: none;
-    }
-
-    .nav-cta {
-      background: var(--plum) !important;
-      color: white !important;
-      padding: 0.55rem 1.6rem;
-      border-radius: 100px;
-    }
-
-    /* HERO  */
+    /* HERO SIMPLIFICADO (Para evitar página en blanco) */
     .hero {
-      min-height: 100vh;
+      min-height: 80vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 8rem var(--pad-x) 4rem;
+      padding: 10rem 2rem 5rem;
+    }
+    .hero-brand {
+      font-size: clamp(4rem, 10vw, 7rem);
+      font-weight: 500;
+      color: var(--plum-deep);
+      margin-bottom: 0.5rem;
+    }
+    .hero-title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 400;
+      color: var(--plum-deep);
+      margin-bottom: 2rem;
+    }
+    .hero-title em { font-style: italic; color: var(--plum-soft); }
+
+    /* SECCIÓN SOBRE MÍ REORDENADA */
+    .about {
+      background: white;
+      padding: 6rem 2rem;
+    }
+    .container {
       max-width: var(--max-w);
       margin: 0 auto;
     }
 
-    .hero-brand {
-      font-size: clamp(4rem, 8vw, 7rem);
-      font-weight: 400;
+    .description-text {
+      margin-bottom: 3rem;
+      font-weight: 500; /* Más oscuro/marcado */
+      color: var(--text-dark);
+    }
+
+    .photo-wrapper {
+      margin-bottom: 1.5rem;
+    }
+    .photo-circle {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      margin: 0 auto;
+      overflow: hidden;
+      border: 3px solid var(--rosa-pale);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+    .photo-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .identity {
+      margin-bottom: 4rem;
+    }
+    .name {
+      font-size: 1.6rem;
+      font-weight: 600;
       color: var(--plum-deep);
-      margin-bottom: 0.6rem;
+      font-style: italic;
     }
-    .hero-brand::after {
-      content: '';
+    .role {
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--plum-soft);
+    }
+
+    .final-quote {
+      margin-top: 4rem;
+      padding: 3rem;
+      background: var(--rosa-blush);
+      border-radius: 20px;
+    }
+    .section-title {
+      font-size: 2.8rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      color: var(--plum-deep);
+    }
+    .value-box {
+      border-top: 1px solid var(--rosa);
+      padding-top: 1.5rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .value-box strong {
       display: block;
-      width: 4rem;
-      height: 2px;
-      background: var(--rosa);
-      margin: 1rem auto 1.8rem; /* Centrado */
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      color: var(--plum);
     }
 
-    .hero-title {
-      font-size: clamp(2.5rem, 4vw, 4rem);
-      font-weight: 400;
-      line-height: 1.1;
-      margin-bottom: 2rem;
-    }
-
-    .hero-desc {
-      font-size: 1.35rem;
-      font-weight: 400;
-      max-width: 40ch;
-      margin: 0 auto 2.5rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 1.2rem;
-      justify-content: center;
-    }
-
-    /* BTNS  */
-    .btn-primary, .btn-secondary {
+    .btn-primary {
+      display: inline-block;
+      background: var(--plum);
+      color: white;
       padding: 1rem 2.5rem;
       border-radius: 100px;
       text-decoration: none;
       font-weight: 600;
-      transition: all 0.3s;
-    }
-    .btn-primary { background: var(--plum); color: white; }
-    .btn-secondary { border: 2px solid var(--rosa); color: var(--plum); }
-
-    /* SECTION COMMON  */
-    .section-inner {
-      max-width: 800px; /* Más estrecho para mejor lectura centrada */
-      margin: 0 auto;
-      padding: 0 var(--pad-x);
+      margin-top: 2rem;
     }
 
-    .section-label {
-      font-size: 1.1rem;
-      font-style: italic;
-      color: var(--plum-soft);
-      margin-bottom: 1rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.8rem;
-    }
+    /* Eliminar animaciones complejas que causaban errores */
+    .reveal { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
 
-    .section-title {
-      font-size: clamp(2.5rem, 4vw, 3.5rem);
-      font-weight: 400;
-      color: var(--plum-deep);
-      margin-bottom: 2.5rem;
-      text-align: center;
-    }
+<nav>
+  <a href="#" class="nav-logo">SerElpis</a>
+</nav>
 
-    /* REESTRUCTURACIÓN SOBRE MÍ  */
-    .about { background: white; padding: 8rem 0; }
+<section class="hero">
+  <div class="hero-brand">SerElpis</div>
+  <h1 class="hero-title">Construye una vida que merezca la pena <em>ser vivida</em></h1>
+  <a href="#contacto" class="btn-primary">Pide tu sesión</a>
+</section>
+
+<section class="about" id="sobre-mi">
+  <div class="container">
     
-    .about-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 3rem;
-    }
+    <div class="description-text">
+      <p>Soy educadora social con formación en psicología — actualmente finalizando el grado — y máster en terapias contextuales.</p>
+      <p style="margin-top:1rem;">Mi práctica integra el análisis de conducta, las terapias de tercera generación y el mindfulness como herramienta de cambio real.</p>
+    </div>
 
-    .about-description {
-      max-width: 700px;
-      font-size: 1.4rem;
-      font-weight: 400;
-      color: var(--text-dark);
-    }
+    <div class="photo-wrapper">
+      <div class="photo-circle">
+        <img src="https://via.placeholder.com/300" alt="Vanessa Luque">
+      </div>
+    </div>
 
-    .about-photo-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-    }
+    <div class="identity">
+      <div class="name">Vanessa Luque</div>
+      <div class="role">Educadora Emocional</div>
+    </div>
 
-    .photo-circle {
-      width: 280px;
-      aspect-ratio: 1;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 3px solid var(--rosa-pale);
-      box-shadow: 0 20px 60px rgba(107,62,94,0.15);
-    }
-    .photo-circle img { width: 100%; height: 100%; object-fit: cover; }
+    <div class="final-quote">
+      <h2 class="section-title">Un enfoque riguroso, <em>una mirada humana</em></h2>
+      <div class="value-box">
+        <strong>Rigor sin rigidez</strong>
+        <p>El trabajo emocional tiene base científica. Usamos modelos con evidencia, pero los adaptamos a ti, no al revés.</p>
+      </div>
+    </div>
 
-    .photo-info { margin-top: 0.5rem; }
-    .photo-name { font-size: 1.6rem; font-weight: 600; color: var(--plum-deep); }
-    .photo-role { font-size: 1.1rem; color: var(--text-light); font-style: italic; }
+  </div>
+</section>
 
-    .highlight-title {
-      font-size: clamp(2.8rem, 5vw, 4rem);
-      line-height: 1.1;
-      color: var(--plum-deep);
-      font-weight: 300;
-      margin: 2rem 0;
-    }
-
-    .about-values-list {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-      max-width: 650px;
-      text-align: center;
-    }
-    
-    .value-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .value-text strong { font-size: 1.5rem; color: var(--plum-deep); display: block; margin-bottom: 0.5rem; }
-    .value-text p { font-size: 1.15rem; color: var(--text-mid); }
-
-    /* SERVICES / HOW  */
-    .services, .how, .contact { padding: 8rem 0; }
-    .services-grid {
-      display: grid;
-      grid-template-columns: 1fr; /* Centrado vertical para impacto */
-      gap: 2rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .service-card {
-      background: white;
-      padding: 3rem;
-      border-radius: 24px;
-      border: 1px solid rgba(107,62,94,0.1);
-    }
-
-    .steps {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 3rem
+</body>
+</html>

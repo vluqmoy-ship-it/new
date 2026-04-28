@@ -80,13 +80,14 @@
     /* HERO */
     .hero {
       min-height: 100vh;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      padding: 7rem 6rem 4rem;
+      justify-content: center;
+      text-align: center;
+      padding: 9rem 4rem 5rem;
       position: relative;
       overflow: hidden;
-      gap: 4rem;
     }
 
     .hero-bg {
@@ -101,6 +102,7 @@
       position: relative;
       z-index: 1;
       animation: fadeUp 0.9s ease both;
+      max-width: 800px;
     }
 
     .hero-eyebrow {
@@ -113,6 +115,7 @@
       margin-bottom: 1.8rem;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 0.8rem;
     }
     .hero-eyebrow::before {
@@ -125,12 +128,12 @@
 
     .hero-title {
       font-family: var(--font);
-      font-size: clamp(2.8rem, 4.5vw, 4.8rem);
+      font-size: clamp(3.4rem, 6.5vw, 6.8rem);
       font-weight: 300;
-      line-height: 1.08;
+      line-height: 1.05;
       color: var(--plum-deep);
       margin-bottom: 2rem;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.02em;
     }
     .hero-title em {
       font-style: italic;
@@ -147,14 +150,15 @@
       font-weight: 400;
       line-height: 1.8;
       color: var(--text-mid);
-      max-width: 48ch;
-      margin-bottom: 3rem;
+      max-width: 52ch;
+      margin: 0 auto 3rem;
     }
 
     .hero-actions {
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     .hero-visual {
@@ -183,6 +187,13 @@
         0 0 0 10px rgba(245,217,226,0.3),
         0 0 0 20px rgba(245,217,226,0.12);
       animation: morph 8s ease-in-out infinite;
+    }
+    .photo-shape img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: saturate(0.9) brightness(1.02);
     }
     @keyframes morph {
       0%,100% { border-radius: 60% 40% 55% 45% / 50% 55% 45% 50%; }
@@ -309,8 +320,8 @@
 
     .about-layout {
       display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 7rem;
+      grid-template-columns: 1fr 2fr;
+      gap: 6rem;
       align-items: start;
     }
 
@@ -319,41 +330,41 @@
       top: 7rem;
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      align-items: center;
+      gap: 1.4rem;
     }
 
     .about-photo-frame {
-      width: 100%;
-      aspect-ratio: 3/4;
-      border-radius: 24px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
       overflow: hidden;
-      box-shadow: 0 20px 60px rgba(107,62,94,0.14);
+      box-shadow:
+        0 0 0 6px rgba(245,217,226,0.5),
+        0 0 0 12px rgba(245,217,226,0.2),
+        0 16px 50px rgba(107,62,94,0.16);
+      border: 2px solid rgba(107,62,94,0.1);
       position: relative;
     }
     .about-photo-frame img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center top;
+      object-position: center 8%;
       filter: saturate(0.88) brightness(1.02);
-    }
-    .about-photo-frame::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, transparent 60%, rgba(74,42,64,0.15) 100%);
     }
 
     .about-name-block {
       text-align: center;
-      padding: 1.4rem 1.8rem;
+      padding: 1.1rem 1.5rem;
       background: var(--rosa-blush);
       border-radius: 16px;
       border: 1px solid var(--rosa-pale);
+      width: 100%;
     }
     .about-name {
       font-family: var(--font);
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-weight: 500;
       font-style: italic;
       color: var(--plum-deep);
@@ -361,7 +372,7 @@
     }
     .about-role {
       font-family: var(--font);
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 300;
       color: var(--text-light);
       display: block;
@@ -777,7 +788,7 @@
     </div>
   </div>
 
-  <div class="hero-visual">
+  <div class="hero-visual" style="display:none">
     <div class="photo-container">
       <div class="photo-deco"></div>
       <div class="photo-deco2"></div>

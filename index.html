@@ -750,6 +750,112 @@
       footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem; }
       .footer-links { flex-wrap: wrap; justify-content: center; }
     }
+    /*
+  SerElpis — parches de tipografía
+  ─────────────────────────────────
+  Pega este bloque JUSTO ANTES de </style> en tu HTML.
+  No cambia nada de layout ni estructura.
+*/
+
+/* 1. Variables de color: texto más oscuro */
+:root {
+  --text-mid:   #150a12;   /* era #271626 */
+  --text-light: #261528;   /* era #3E2438 */
+}
+
+/* 2. Cuerpo: peso base más firme */
+body {
+  font-weight: 500;        /* era 400 */
+}
+
+/* 3. Texto eyebrow / etiquetas */
+.hero-eyebrow,
+.section-label {
+  font-size: 0.94rem;      /* era 0.88–0.9rem */
+  font-weight: 500;        /* era 400 */
+}
+
+/* 4. Descripción del héroe */
+.hero-desc {
+  font-size: 1.18rem;      /* era 1.15rem */
+  font-weight: 500;        /* era 400 */
+}
+
+/* 5. Nav links */
+.nav-links a {
+  font-size: 0.98rem;      /* era 0.95rem */
+  font-weight: 500;        /* era 400 */
+}
+
+/* 6. Texto de párrafos "sobre mí" */
+.about-text p {
+  font-size: 1.13rem;      /* era 1.1rem */
+  font-weight: 500;        /* era 400 */
+}
+
+/* 7. Rol bajo el nombre (badge y panel lateral) */
+.badge-role,
+.about-role {
+  font-weight: 400;        /* era 300 */
+}
+
+/* 8. Intro de servicios */
+.services-intro {
+  font-weight: 400;        /* era 300 */
+}
+
+/* 9. Descripciones de tarjetas de servicio */
+.service-desc {
+  font-size: 1.02rem;      /* era 0.98rem */
+  font-weight: 400;        /* implícito 400, ahora explícito */
+}
+
+/* 10. Nota de servicio */
+.service-note {
+  font-size: 0.96rem;      /* era 0.92rem */
+}
+
+/* 11. Descripción de pasos */
+.step-desc {
+  font-size: 1rem;         /* era 0.94rem */
+  font-weight: 400;        /* era sin especificar / hereda 300 */
+}
+
+/* 12. Texto de valores */
+.value-text p {
+  font-size: 1rem;         /* era 0.98rem */
+  font-weight: 400;        /* era 300 */
+}
+
+/* 13. Texto info de contacto */
+.contact-info-text {
+  font-size: 1.13rem;      /* era 1.1rem */
+  font-weight: 500;        /* era 400 */
+}
+
+/* 14. Pills */
+.pill {
+  font-size: 0.92rem;      /* era 0.88rem */
+}
+
+/* 15. Labels de formulario */
+label {
+  font-size: 0.92rem;      /* era 0.88rem */
+  font-weight: 500;        /* era 400 */
+}
+
+/* 16. Nota de formulario */
+.form-note {
+  font-size: 0.92rem;      /* era 0.86rem */
+}
+
+/* 17. Footer */
+.footer-links a {
+  font-size: 0.96rem;      /* era 0.92rem */
+}
+.footer-copy {
+  font-size: 0.92rem;      /* era 0.86rem */
+}
   </style>
 </head>
 <body>

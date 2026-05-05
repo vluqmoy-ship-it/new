@@ -96,12 +96,13 @@
 
     body {
       font-family: var(--font);
-      background: var(--cream);
-      color: var(--text-dark);
-      overflow-x: hidden;
-      font-size: 90px;
-      font-weight: 500;
-    }
+  background: var(--cream);
+  color: var(--text-dark);
+  overflow-x: hidden;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.6;
+}
 
     nav {
       position: fixed;
@@ -119,7 +120,7 @@
     nav.scrolled { box-shadow: 0 2px 24px rgba(107,62,94,0.08); }
     .nav-logo {
       font-family: var(--font);
-      font-size: 1.8rem;
+      font-size: 2rem;
       font-weight: 500;
       letter-spacing: 0.04em;
       color: var(--plum);
@@ -128,7 +129,7 @@
     .nav-links { display: flex; gap: 2.4rem; list-style: none; }
     .nav-links a {
       font-family: var(--font);
-      font-size: 0.95rem;
+      font-size: 1.15rem;
       font-weight: 400;
       letter-spacing: 0.06em;
       color: var(--text-mid);
@@ -174,7 +175,7 @@
 
     .hero-eyebrow {
       font-family: var(--font);
-      font-size: 0.88rem;
+      font-size: 1.08rem;
       font-weight: 400;
       font-style: italic;
       letter-spacing: 0.12em;
@@ -209,7 +210,7 @@
     }
 
     .hero-desc {
-      font-size: 1.15rem;
+      font-size: 1.29rem;
       font-weight: 400;
       line-height: 1.8;
       color: var(--text-mid);
@@ -232,7 +233,7 @@
       border-radius: 100px;
       text-decoration: none;
       font-family: var(--font);
-      font-size: 1rem;
+      font-size: 1.2rem;
       font-weight: 500;
       letter-spacing: 0.04em;
       transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
@@ -247,7 +248,7 @@
       border-radius: 100px;
       text-decoration: none;
       font-family: var(--font);
-      font-size: 1rem;
+      font-size: 1.2rem;
       font-weight: 500;
       letter-spacing: 0.04em;
       transition: border-color 0.2s, background 0.2s, transform 0.2s;
@@ -259,7 +260,7 @@
 
     .section-label {
       font-family: var(--font);
-      font-size: 0.9rem;
+      font-size: 1.15rem;
       font-weight: 400;
       font-style: italic;
       letter-spacing: 0.12em;
@@ -279,7 +280,7 @@
 
     .section-title {
       font-family: var(--font);
-      font-size: clamp(1.8rem, 2.8vw, 2.8rem);
+      font-size: clamp(2.0rem, 2.95vw, 2.95rem);
       font-weight: 300;
       line-height: 1.15;
       color: var(--plum-deep);
@@ -336,7 +337,7 @@
     }
     .about-name {
       font-family: var(--font);
-      font-size: 1.4rem;
+      font-size: 1.7rem;
       font-weight: 500;
       font-style: italic;
       color: var(--plum-deep);
@@ -344,7 +345,7 @@
     }
     .about-role {
       font-family: var(--font);
-      font-size: 0.88rem;
+      font-size: 1.08rem;
       font-weight: 300;
       color: var(--text-light);
       display: block;
@@ -353,7 +354,7 @@
     }
 
     .about-text p {
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       line-height: 1.9;
       color: var(--text-mid);
       margin-bottom: 1.4rem;
@@ -371,7 +372,7 @@
       border: 1px solid var(--rosa-pale);
       color: var(--plum);
       font-family: var(--font);
-      font-size: 0.88rem;
+      font-size: 1.08rem;
       font-style: italic;
       padding: 0.4rem 1rem;
       border-radius: 100px;
@@ -390,7 +391,7 @@
     }
     .value-number {
       font-family: var(--font);
-      font-size: 2.2rem;
+      font-size: 2.3rem;
       font-weight: 300;
       font-style: italic;
       color: var(--rosa);
@@ -403,13 +404,13 @@
     .value-text strong {
       display: block;
       font-family: var(--font);
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       font-weight: 500;
       color: var(--plum-deep);
       margin-bottom: 0.3rem;
     }
     .value-text p {
-      font-size: 0.98rem;
+      font-size: 1.18rem;
       line-height: 1.7;
       color: var(--text-mid);
       font-weight: 300;
@@ -435,7 +436,7 @@
 
     .services-intro {
       font-family: var(--font);
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       font-weight: 300;
       font-style: italic;
       color: var(--text-mid);
@@ -472,11 +473,11 @@
     .service-card:hover { transform: translateY(-5px); box-shadow: 0 16px 48px rgba(107,62,94,0.11); }
     .service-card:hover::after { transform: scaleX(1); }
 
-    .service-icon { font-size: 1.7rem; margin-bottom: 1.3rem; display: block; }
+    .service-icon { font-size: 1.9rem; margin-bottom: 1.55rem; display: block; }
 
     .service-title {
       font-family: var(--font);
-      font-size: 1.45rem;
+      font-size: 1.75rem;
       font-weight: 500;
       font-style: italic;
       color: var(--plum-deep);
@@ -485,7 +486,7 @@
     }
     .service-desc {
       font-family: var(--font);
-      font-size: 0.98rem;
+      font-size: 1.18rem;
       line-height: 1.8;
       color: var(--text-mid);
     }
@@ -493,7 +494,7 @@
       margin-top: 1rem;
       font-style: italic;
       color: var(--plum-soft);
-      font-size: 0.92rem;
+      font-size: 1.19rem;
       line-height: 1.7;
     }
 
@@ -531,7 +532,7 @@
       background: linear-gradient(135deg, var(--plum), var(--plum-soft));
       color: white;
       font-family: var(--font);
-      font-size: 1.6rem;
+      font-size: 1.9rem;
       font-weight: 400;
       font-style: italic;
       display: flex;
@@ -542,14 +543,14 @@
     }
     .step-title {
       font-family: var(--font);
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       font-weight: 500;
       color: var(--plum-deep);
       margin-bottom: 0.5rem;
     }
     .step-desc {
       font-family: var(--font);
-      font-size: 0.94rem;
+      font-size: 1.2rem;
       line-height: 1.7;
       color: var(--text-light);
     }

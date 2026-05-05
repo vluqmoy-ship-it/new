@@ -1073,29 +1073,59 @@
           <span>Respondo en menos de 48h</span>
         </div>
       </div>
-      <div class="contact-form reveal">
-        action="https://formspree.io/f/xkoyrknw" 
+      <form class="contact-form reveal" 
+      action="https://formspree.io/f/xkoyrknw" 
       method="POST">
-        <div class="form-group">
-          <label for="nombre">Nombre</label>
-          <input type="text" id="nombre" placeholder="&#191;C&#243;mo te llamas?" />
-        </div>
-        <div class="form-group">
-          <label for="email">Correo electr&#243;nico</label>
-          <input type="email" id="email" placeholder="tu@correo.com" />
-        </div>
-        <div class="form-group">
-          <label for="mensaje">Cu&#233;ntame un poco m&#225;s (opcional)</label>
-          <textarea id="mensaje" placeholder="Sin presi&#243;n, escribe lo que quieras..."></textarea>
-        </div>
-        <p class="form-note">
-          Tus datos no se comparten con nadie. Te escribir&#233; para concretar antes de la primera sesi&#243;n.
-        </p>
-        <button class="btn-primary" style="border:none;cursor:pointer;width:100%;font-size:1.05rem;padding:1rem;"
-          onclick="alert('&#161;Gracias! Te escribo pronto.')">
-          Pedir m&#225;s informaci&#243;n &rarr;
-        </button>
-      </div>
+
+  <div class="form-group">
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" 
+           placeholder="¿Cómo te llamas?" required />
+  </div>
+
+  <div class="form-group">
+    <label for="email">Correo electrónico</label>
+    <input type="email" id="email" name="email" 
+           placeholder="tu@correo.com" required />
+  </div>
+
+  <div class="form-group">
+    <label for="motivo">¿Qué te gustaría trabajar?</label>
+    <select id="motivo" name="motivo">
+      <option value="">Selecciona una opción</option>
+      <option>Regulación emocional</option>
+      <option>Clarificación de valores</option>
+      <option>Flexibilidad psicológica</option>
+      <option>No sé muy bien, pero algo necesito</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="mensaje">Cuéntame un poco más (opcional)</label>
+    <textarea id="mensaje" name="mensaje" 
+              placeholder="Sin presión, escribe lo que quieras..."></textarea>
+  </div>
+
+  <!-- Campo oculto para redirigir después del envío -->
+  <input type="hidden" name="_next" 
+         value="https://www.serelpis.com?enviado=true" />
+
+  <!-- Evita spam -->
+  <input type="hidden" name="_subject" 
+         value="Nueva consulta desde SerElpis" />
+
+  <p class="form-note">
+    Tus datos no se comparten con nadie. Te escribiré para 
+    concretar antes de la primera sesión.
+  </p>
+
+  <button type="submit" class="btn-primary" 
+          style="border:none;cursor:pointer;width:100%;
+                 font-size:1.05rem;padding:1rem;">
+    Pedir más información →
+  </button>
+
+</form>
     </div>
   </div>
 </section>

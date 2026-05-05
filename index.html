@@ -1073,52 +1073,67 @@
           <span>Respondo en menos de 48h</span>
         </div>
       </div>
-      <form class="contact-form reveal" 
-      action="https://formspree.io/f/xkoyrknw" 
-      method="POST">
-
+      <form id="contact-form" class="contact-form reveal" method="POST">
   <div class="form-group">
     <label for="nombre">Nombre</label>
     <input type="text" id="nombre" name="nombre" 
            placeholder="¿Cómo te llamas?" required />
   </div>
-
   <div class="form-group">
     <label for="email">Correo electrónico</label>
     <input type="email" id="email" name="email" 
            placeholder="tu@correo.com" required />
   </div>
-
   <div class="form-group">
     <label for="mensaje">Tu mensaje</label>
     <textarea id="mensaje" name="mensaje" 
               placeholder="Sin presión, escribe lo que quieras..."></textarea>
   </div>
-
-  <!-- Campo oculto para redirigir después del envío -->
-  <input type="hidden" name="_next" 
-         value="https://www.serelpis.com?enviado=true" />
-
-  <!-- Evita spam -->
-  <input type="hidden" name="_subject" 
-         value="Nueva consulta desde SerElpis" />
-
   <p class="form-note">
     Tus datos no se comparten con nadie. Te escribiré para 
     concretar antes de la primera sesión.
   </p>
-
   <button type="submit" class="btn-primary" 
           style="border:none;cursor:pointer;width:100%;
                  font-size:1.05rem;padding:1rem;">
     Pedir más información →
   </button>
-
 </form>
+
+<div id="confirmation" class="reveal" style="display:none; text-align:center; padding:40px;">
+  <h2>✓ Mensaje enviado</h2>
+  <p>Gracias por contactar, te responderé en breve.</p>
+  <button onclick="location.reload()" class="btn-primary" 
+          style="border:none;cursor:pointer;margin-top:20px;
+                 font-size:1.05rem;padding:1rem;">
+    Volver al formulario
+  </button>
+</div>
+
+<script>
+  document.getElementById('contact-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const formData = new FormData(e.target);
+    
+    try {
+      await fetch('https://formspree.io/f/xkoyrknw', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      
+      document.getElementById('contact-form').style.display = 'none';
+      document.getElementById('confirmation').style.display = 'block';
+    } catch (error) {
+      console.error('Error:', error);
+      alert('No se pudo enviar el mensaje');
+    }
+  });
+</script>
     </div>
   </div>
 </section>
-
 <footer>
   <div class="footer-brand">SerElpis</div>
   <ul class="footer-links">

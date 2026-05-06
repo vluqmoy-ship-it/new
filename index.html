@@ -797,14 +797,13 @@
   <div style="max-width:1100px;margin:0 auto;width:100%;display:flex;justify-content:space-between;align-items:center;">
     <a href="#" class="nav-logo">SerElpis</a>
     <ul class="nav-links">
-      <ul class="nav-links">
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#sobre-el-proyecto">Sobre el proyecto</a></li>
-      <li><a href="#sobre-mi">Sobre m&#237;</a></li>
-      <li><a href="#sesiones">Sesiones</a></li>
-      <li><a href="#como-funciona">C&#243;mo funciona</a></li>
-      <li><a href="#faq">Preguntas frecuentes</a></li>
-      <li><a href="#contacto" class="nav-cta">Contacta</a></li>
+     <li><a href="#">Inicio</a></li>
+     <li><a href="#sobre-mi">Sobre mí</a></li>
+     <li><a href="#sesiones">Sesiones</a></li>
+     <li><a href="#como-funciona">Cómo funciona</a></li>
+     <li><a href="#faq">Preguntas frecuentes</a></li>
+     <li><a href="#sobre-el-proyecto">Sobre el proyecto</a></li>
+     <li><a href="#contacto" class="nav-cta">Contacta</a></li>
     </ul>
   </div>
 </nav>
@@ -864,17 +863,32 @@
 </section>
 
   <!-- SOBRE EL PROYECTO -->
-<section class="about" id="sobre-el-proyecto" style="background:var(--rosa-blush);">
+<section id="sobre-el-proyecto" style="background:var(--rosa-blush); padding: 0 4rem;">
   <div class="section-inner" style="max-width:800px;">
-    <div class="section-label reveal">Sobre el proyecto</div>
-    <h2 class="section-title reveal">Por qué existe<br><em>SerElpis</em></h2>
-
-    <div class="about-text reveal">
-      <p>Cuando empecé a idear este proyecto, el objetivo principal que tenía en mente era ayudar a reducir el sufrimiento de las personas, especialmente aquellas que llevan tanto tiempo con él que apenas tienen ya esperanzas de encontrar una solución. Quería que mi meta fuera transmitir esperanza y ayudar a las personas a comprender lo que les pasa, acompañándolas en un proceso que les permita construir una vida que merezca la pena, en lugar de simplemente sobrevivir.</p>
-      <p>La verdad es que no tengo mucha idea de mitología griega pero un día —gracias a una de mis aficiones frikis— descubrí un lugar ficticio llamado <em>Elpis</em> que resonó profundamente conmigo. Este lugar no solo tenía el significado de la palabra griega para "esperanza", sino que se trataba de un sitio al que llegas después de un largo periplo, donde por fin encuentras respuestas que llevas mucho tiempo buscando y donde existe total libertad para experimentar en un entorno seguro, ayudando a mejorar el mundo.</p>
-      <p>Tanto el significado de <em>Elpis</em> como el concepto de ese lugar ficticio me parecieron encajar a la perfección con lo que yo me proponía y por eso decidí adoptar el nombre de SerElpis, con el objetivo de ofrecer un lugar seguro donde quien lo necesite pueda acudir a explorar para conocerse mejor, encontrar esperanza, respuestas y oportunidades de experimentar nuevas formas de sentir, pensar y actuar.</p>
-      <p>SerElpis no es una promesa de soluciones rápidas ni de transformaciones milagrosas. Es un espacio para detenerse, explorar lo que ocurre dentro de ti con curiosidad y sin juicio, y aprender, poco a poco, a vivir de una forma que se sienta más tuya y más plena. Si has llegado hasta aquí quizás todavía crees que es posible. Me gustaría oír de ti&nbsp;:)</p>
-    </div>
+    <details style="border-top: 1px solid rgba(107,62,94,0.12); border-bottom: 1px solid rgba(107,62,94,0.12);">
+      <summary style="
+        font-family: var(--font);
+        font-size: 1.45rem;
+        font-weight: 500;
+        color: var(--plum-deep);
+        padding: 2rem 0;
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      ">
+        Sobre el proyecto
+        <span style="font-size:1.8rem; color:var(--plum-soft);">+</span>
+      </summary>
+      <div style="padding-bottom: 3rem;">
+        <!-- Aquí pega exactamente el contenido interior del div.about-text que ya tienes -->
+        <div class="about-text">
+          <p>Cuando empecé a idear este proyecto...</p>
+          <!-- resto de párrafos -->
+        </div>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -969,7 +983,6 @@
     </div>
     <div class="services-grid">
       <div class="service-card reveal">
-        <span class="service-icon">&#127754;</span>
         <div class="service-title">Regulaci&#243;n emocional</div>
         <p class="service-desc">
           Cuando parece que tus emociones controlan tu vida.
@@ -983,7 +996,6 @@
         </p>
       </div>
       <div class="service-card reveal">
-        <span class="service-icon">&#129517;</span>
         <div class="service-title">Clarificaci&#243;n de valores</div>
         <p class="service-desc">
           Cuando act&#250;as en piloto autom&#225;tico o sientes que tu vida no refleja
@@ -996,7 +1008,6 @@
         </p>
       </div>
       <div class="service-card reveal">
-        <span class="service-icon">&#127807;</span>
         <div class="service-title">Flexibilidad psicol&#243;gica</div>
         <p class="service-desc">
           Cuando el malestar, los pensamientos o las circunstancias dif&#237;ciles

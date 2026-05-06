@@ -711,6 +711,17 @@
       .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
       footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem; }
       .footer-links { flex-wrap: wrap; justify-content: center; }
+      .hero-content {
+  grid-template-columns: 1fr !important;
+  text-align: center !important;
+  gap: 2.5rem !important;
+}
+.hero-eyebrow {
+  justify-content: center !important;
+}
+.hero-actions {
+  justify-content: center !important;
+}
     }
     .faq { background: white; padding: 3rem 4rem 8rem 4rem; }
 .faq-header { text-align: center; margin-bottom: 3.5rem; }
@@ -789,22 +800,70 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
-  <div class="hero-content">
-    <div class="hero-eyebrow">Habilidades Emocionales · Psicolog&#237;a Contextual</div>
-    <h1 class="hero-title">
-      Construye una vida<br>
-      que merezca la pena<br>
-      <em>ser vivida</em>
-    </h1>
-    <p class="hero-desc">
-      Un espacio para aprender a relacionarte con tus emociones,
-      clarificar lo que importa de verdad y moverte hacia ello.
-      Sesiones individuales online desde un enfoque contextual y basado en evidencia.
-    </p>
-    <div class="hero-actions">
-      <a href="#contacto" class="btn-primary">Contacta</a>
-      <a href="#sobre-mi" class="btn-secondary">Conoce el proyecto</a>
+  <div class="hero-content" style="max-width:1100px;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;text-align:left;">
+
+    <!-- Columna izquierda -->
+    <div>
+      <div class="hero-eyebrow" style="justify-content:flex-start;">Habilidades Emocionales · Psicología Contextual</div>
+      <h1 class="hero-title">
+        Construye una vida<br>
+        que merezca la pena<br>
+        <em>ser vivida</em>
+      </h1>
+      <div class="hero-actions" style="justify-content:flex-start;">
+        <a href="#contacto" class="btn-primary">Cuéntame qué necesitas →</a>
+        <a href="#sobre-mi" class="btn-secondary">Conoce el proyecto</a>
+      </div>
     </div>
+
+    <!-- Columna derecha -->
+    <div style="display:flex;flex-direction:column;gap:1.8rem;">
+      <p style="font-family:var(--font);font-size:1.35rem;font-weight:400;line-height:1.6;color:var(--text-mid);">
+        Acompañamiento y entrenamiento en habilidades emocionales.<br>
+        <span style="font-style:italic;color:var(--plum-soft);">Online · Individual · Basado en evidencia</span>
+      </p>
+
+      <p style="font-family:var(--font);font-size:1.05rem;font-weight:400;letter-spacing:0.06em;color:var(--plum-soft);font-style:italic;">
+        Para quienes atraviesan:
+      </p>
+
+      <div style="display:flex;flex-direction:column;gap:0.9rem;">
+
+        <div style="display:flex;align-items:flex-start;gap:0.9rem;">
+          <span style="color:var(--rosa);font-size:1.3rem;line-height:1.2;flex-shrink:0;">&#127754;</span>
+          <div>
+            <span style="font-family:var(--font);font-size:1.15rem;font-weight:500;color:var(--plum-deep);">Desregulación emocional</span>
+            <p style="font-family:var(--font);font-size:1rem;color:var(--text-light);margin-top:0.15rem;">Ansiedad, ira, bloqueo, reactividad intensa.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:flex-start;gap:0.9rem;">
+          <span style="color:var(--rosa);font-size:1.3rem;line-height:1.2;flex-shrink:0;">&#129517;</span>
+          <div>
+            <span style="font-family:var(--font);font-size:1.15rem;font-weight:500;color:var(--plum-deep);">Crisis vitales</span>
+            <p style="font-family:var(--font);font-size:1rem;color:var(--text-light);margin-top:0.15rem;">Duelo, rupturas, cambios de etapa, pérdida de sentido.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:flex-start;gap:0.9rem;">
+          <span style="color:var(--rosa);font-size:1.3rem;line-height:1.2;flex-shrink:0;">&#127807;</span>
+          <div>
+            <span style="font-family:var(--font);font-size:1.15rem;font-weight:500;color:var(--plum-deep);">Piloto automático y valores</span>
+            <p style="font-family:var(--font);font-size:1rem;color:var(--text-light);margin-top:0.15rem;">Sensación de vacío, decisiones reactivas, vida que no refleja lo que importa.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:flex-start;gap:0.9rem;">
+          <span style="color:var(--rosa);font-size:1.3rem;line-height:1.2;flex-shrink:0;">&#127760;</span>
+          <div>
+            <span style="font-family:var(--font);font-size:1.15rem;font-weight:500;color:var(--plum-deep);">Flexibilidad psicológica</span>
+            <p style="font-family:var(--font);font-size:1rem;color:var(--text-light);margin-top:0.15rem;">Rumia, evitación, perfeccionismo, dificultad con la incertidumbre.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </section>
 

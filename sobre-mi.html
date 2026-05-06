@@ -80,93 +80,8 @@
     }
     .nav-cta:hover { background: var(--plum-deep) !important; }
 
-    /* ── HERO ── */
-    .page-hero {
-      min-height: 52vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-end;
-      text-align: center;
-      padding: 9rem 3rem 5rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .page-hero-bg {
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 60% 70% at 80% 30%, rgba(232,170,187,0.20) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 55% at 10% 85%, rgba(107,62,94,0.05) 0%, transparent 70%);
-    }
-    .page-hero-content {
-      position: relative;
-      z-index: 1;
-      animation: fadeUp 0.9s ease both;
-      max-width: 720px;
-    }
-    .page-hero-eyebrow {
-      font-family: var(--font);
-      font-size: 1rem;
-      font-weight: 400;
-      font-style: italic;
-      letter-spacing: 0.14em;
-      color: var(--plum-soft);
-      margin-bottom: 1.4rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.8rem;
-    }
-    .page-hero-eyebrow::before {
-      content: '';
-      display: block;
-      width: 2.5rem;
-      height: 1px;
-      background: var(--rosa);
-    }
-    .page-hero-title {
-      font-family: var(--font);
-      font-size: clamp(3rem, 5.5vw, 5.5rem);
-      font-weight: 300;
-      line-height: 1.08;
-      color: var(--plum-deep);
-      letter-spacing: -0.02em;
-      margin-bottom: 1.6rem;
-    }
-    .page-hero-title em {
-      font-style: italic;
-      color: var(--plum-soft);
-    }
-    .page-hero-desc {
-      font-family: var(--font);
-      font-size: 1.22rem;
-      font-weight: 300;
-      font-style: italic;
-      line-height: 1.75;
-      color: var(--text-mid);
-    }
-
-    /* ── BREADCRUMB ── */
-    .breadcrumb {
-      background: var(--rosa-blush);
-      border-bottom: 1px solid var(--rosa-pale);
-      padding: 0.7rem 2rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: var(--font);
-      font-size: 0.92rem;
-      color: var(--plum-soft);
-    }
-    .breadcrumb a {
-      color: var(--plum-soft);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .breadcrumb a:hover { color: var(--plum); }
-    .breadcrumb-sep { opacity: 0.5; }
-    .breadcrumb-current { color: var(--plum-deep); font-weight: 500; }
+    /* ── NAV SPACER ── */
+    .nav-spacer { height: 5rem; }
 
     /* ── SECTION INNER ── */
     .section-inner { max-width: 1100px; margin: 0 auto; }
@@ -205,7 +120,7 @@
     /* ── SOBRE MÍ ── */
     .sobre-mi {
       background: white;
-      padding: 6rem 4rem 7rem;
+      padding: 4rem 4rem 7rem;
     }
     .sobre-mi-layout {
       display: grid;
@@ -572,8 +487,7 @@
         display: none;
         position: fixed;
         top: 0; left: 0; right: 0; bottom: 0;
-        background: rgba(251, 247, 244, 0.97);
-        backdrop-filter: blur(14px);
+        background: #FBF7F4;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -609,28 +523,8 @@
   </div>
 </nav>
 
-<!-- PAGE HERO -->
-<section class="page-hero">
-  <div class="page-hero-bg"></div>
-  <div class="page-hero-content">
-    <div class="page-hero-eyebrow">Conócenos</div>
-    <h1 class="page-hero-title">
-      Las personas<br>y el proyecto<br>detrás de <em>SerElpis</em>
-    </h1>
-    <p class="page-hero-desc">
-      De dónde venimos, qué nos mueve y por qué creemos que otro tipo de acompañamiento es posible.
-    </p>
-  </div>
-</section>
-
-<!-- BREADCRUMB -->
-<div class="breadcrumb">
-  <div style="max-width:1100px;margin:0 auto;width:100%;display:flex;gap:0.5rem;align-items:center;">
-    <a href="index.html">Inicio</a>
-    <span class="breadcrumb-sep">›</span>
-    <span class="breadcrumb-current">Sobre mí y el proyecto</span>
-  </div>
-</div>
+<!-- NAV SPACER -->
+<div class="nav-spacer"></div>
 
 <!-- ══════════════════════════════════════
      SECCIÓN 1 · SOBRE MÍ
@@ -676,16 +570,6 @@
             sino que parte de la historia de vida y el contexto único de cada persona,
             diseñando procesos de acompañamiento personalizados que transforman realidades.
           </p>
-        </div>
-
-        <div class="pills reveal">
-          <span class="pill">Regulación emocional</span>
-          <span class="pill">Manejo de la rumia</span>
-          <span class="pill">Mindfulness para la vida diaria</span>
-          <span class="pill">Clarificación de valores</span>
-          <span class="pill">Terapias contextuales</span>
-          <span class="pill">Análisis de conducta</span>
-          <span class="pill">ACT</span>
         </div>
 
         <div class="values-list">

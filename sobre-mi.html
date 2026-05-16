@@ -116,6 +116,40 @@
       letter-spacing: -0.01em;
     }
     .section-title em { font-style: italic; color: var(--plum-soft); }
+    .manifesto {
+      background: var(--plum-deep);
+      padding: 7rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .manifesto::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 30% 50%, rgba(232,170,187,0.06) 0%, transparent 70%);
+    }
+    .manifesto-quote {
+      font-family: var(--font);
+      font-size: clamp(1.8rem, 3.2vw, 3rem);
+      font-weight: 400;
+      font-style: italic;
+      color: rgba(245,217,226,0.95);
+      max-width: 800px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.45;
+      position: relative;
+      z-index: 1;
+    }
+    .manifesto-sub {
+      font-family: var(--font);
+      font-size: 0.88rem;
+      letter-spacing: 0.12em;
+      color: rgba(232,170,187,0.45);
+      font-style: italic;
+      position: relative;
+      z-index: 1;
+    }
 
     /* ── SOBRE MÍ ── */
     .sobre-mi {

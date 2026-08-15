@@ -112,9 +112,9 @@
       justify-content: space-between;
       align-items: center;
       padding: 1.2rem 2rem;
-      background: rgba(251, 247, 244, 0.92);
+      background: rgba(74, 42, 64, 0.96);
       backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(107, 62, 94, 0.08);
+      border-bottom: 1px solid rgba(232, 170, 187, 0.12);
       transition: box-shadow 0.3s;
     }
     nav.scrolled { box-shadow: 0 2px 24px rgba(107,62,94,0.08); }
@@ -123,7 +123,7 @@
       font-size: 2rem;
       font-weight: 500;
       letter-spacing: 0.04em;
-      color: var(--plum);
+      color: var(--rosa-pale);
       text-decoration: none;
     }
     .nav-links { display: flex; gap: 2.4rem; list-style: none; }
@@ -132,19 +132,19 @@
       font-size: 1rem;
       font-weight: 400;
       letter-spacing: 0.04em;
-      color: var(--text-mid);
+      color: rgba(245, 217, 226, 0.75);
       text-decoration: none;
       transition: color 0.2s;
     }
-    .nav-links a:hover { color: var(--plum); }
+    .nav-links a:hover { color: var(--rosa); }
     .nav-cta {
-      background: var(--plum);
-      color: white !important;
+      background: var(--rosa);
+      color: var(--plum-deep) !important;
       padding: 0.35rem 1rem;
       border-radius: 100px;
       transition: background 0.2s !important;
     }
-    .nav-cta:hover { background: var(--plum-deep) !important; }
+    .nav-cta:hover { background: var(--rosa-pale) !important; }
 
     .hero {
       min-height: 100vh;
@@ -793,7 +793,7 @@
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--plum);
+  background: var(--rosa-pale);
   border-radius: 2px;
   transition: transform 0.3s, opacity 0.9s;
 }

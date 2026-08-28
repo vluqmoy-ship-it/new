@@ -725,19 +725,76 @@
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
     @media (max-width: 900px) {
-      nav { padding: 1rem 1.5rem; }
-      .nav-links { display: none; }
-      .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 3rem; gap: 3rem; }
-      .about { padding: 5rem 1.5rem; }
-      .about-layout { grid-template-columns: 1fr; gap: 3rem; }
-      .about-photo-col { position: static; }
-      .services, .how, .contact { padding: 5rem 1.5rem; }
-      .services-grid { grid-template-columns: 1fr; }
-      .steps { grid-template-columns: 1fr 1fr; }
-      .steps::before { display: none; }
-      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
-      footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem; }
-      .footer-links { flex-wrap: wrap; justify-content: center; }
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    
+    /* Ajuste de padding del Hero para evitar solapamiento con el menú */
+    .hero { 
+      padding: 6rem 1.25rem 3rem; 
+      min-height: auto;
+    }
+
+    .hero-content {
+      grid-template-columns: 1fr !important;
+      text-align: center !important;
+      gap: 2.5rem !important;
+    }
+
+    /* Reducción del tamaño del título en móvil */
+    .hero-title {
+      font-size: 2.5rem !important;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Ajuste del subtítulo para centrar el borde decorativo */
+    .hero-subtitle {
+      font-size: 1.35rem !important;
+      border-left: none !important;
+      border-top: 2px solid var(--rosa);
+      padding-left: 0 !important;
+      padding-top: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Botones apilados verticalmente para que quepa todo el texto */
+    .hero-actions {
+      flex-direction: column !important;
+      justify-content: center !important;
+      gap: 1rem !important;
+      width: 100%;
+    }
+
+    .btn-primary, .btn-secondary {
+      width: 100%;
+      max-width: 320px;
+      text-align: center;
+      padding: 0.85rem 1.2rem;
+    }
+
+    /* Cambio de la cuadrícula de iconos a 2 columnas en móvil */
+    .hero-services-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 2rem 1rem !important;
+      margin-top: 1rem;
+    }
+
+    .hero-service-card-label {
+      font-size: 1.15rem !important;
+      line-height: 1.3;
+    }
+
+    .about { padding: 5rem 1.5rem; }
+    .about-layout { grid-template-columns: 1fr; gap: 3rem; }
+    .about-photo-col { position: static; }
+    .services, .how, .contact { padding: 5rem 1.5rem; }
+    .services-grid { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr 1fr; }
+    .steps::before { display: none; }
+    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem; }
+    .footer-links { flex-wrap: wrap; justify-content: center; }
+  }
       .hero-content {
       grid-template-columns: 1fr !important;
       text-align: center !important;

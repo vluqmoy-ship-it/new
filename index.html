@@ -1056,6 +1056,65 @@
   .serelpis-left { position: static; }
   .section-divider { padding: 0 1.5rem; }
 }
+    /* ── HERO: BADGE + GRID DE SERVICIOS ── */
+.hero-badge {
+  display: inline-block;
+  background: var(--rosa-pale);
+  border: 1px solid rgba(232,170,187,0.6);
+  color: var(--plum-soft);
+  font-family: var(--font);
+  font-size: 0.92rem;
+  font-style: italic;
+  letter-spacing: 0.12em;
+  padding: 0.3rem 1rem;
+  border-radius: 100px;
+  margin-bottom: 1.6rem;
+}
+
+.hero-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9rem;
+}
+
+.hero-service-card {
+  background: rgba(255,255,255,0.5);
+  border: 1.5px dashed rgba(107,62,94,0.2);
+  border-radius: 18px;
+  padding: 1.4rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.65rem;
+  transition: background 0.25s, transform 0.25s, border-color 0.25s;
+  backdrop-filter: blur(6px);
+}
+
+.hero-service-card:hover {
+  background: rgba(255,255,255,0.88);
+  border-color: var(--rosa);
+  transform: translateY(-3px);
+}
+
+.hero-service-card-icon {
+  font-size: 1.65rem;
+  line-height: 1;
+}
+
+.hero-service-card-label {
+  font-family: var(--font);
+  font-size: 1rem;
+  color: var(--plum-deep);
+  line-height: 1.35;
+  font-weight: 400;
+}
+
+@media (max-width: 900px) {
+  .hero-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
   </style>
 </head>
 <body>
@@ -1089,55 +1148,50 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
-  <div class="hero-content" style="max-width:1100px;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:flex-start;text-align:left;">
+  <div class="hero-content" style="max-width:1100px;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;text-align:left;">
 
-    <!-- Columna izquierda -->
+    <!-- Columna izquierda: título + subtítulo + botones -->
     <div>
-      <h1 class="hero-title">
+      <span class="hero-badge">✦ Terapia online</span>
+      <h1 class="hero-title" style="font-size:clamp(2.8rem,5vw,5.2rem);margin-bottom:1.8rem;">
         Construye<br>
-        una vida<br>
-        que merezca<br>
-        la pena<br>
-        ser vivida
+        una vida que<br>
+        merezca la pena
       </h1>
-    </div>
-
-    <!-- Columna derecha -->
-    <div style="display:flex;flex-direction:column;gap:2rem;">
-      <p style="font-family:var(--font);font-size:1.6rem;font-weight:400;line-height:1.5;color:var(--plum-deep);font-style:italic;border-left:3px solid var(--rosa);padding-left:1.2rem;">
+      <p style="font-family:var(--font);font-size:1.5rem;font-weight:400;line-height:1.55;color:var(--plum-deep);font-style:italic;border-left:3px solid var(--rosa);padding-left:1.2rem;margin-bottom:2.2rem;">
         Acompañamiento y entrenamiento<br>en habilidades emocionales
       </p>
-      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.85rem;">
-        <li style="font-family:var(--font);font-size:1.2rem;color:var(--text-mid);display:flex;align-items:baseline;gap:0.75rem;">
-          <span style="color:var(--rosa);font-size:0.7rem;line-height:1.8;flex-shrink:0;">&#9670;</span>
-          Gestión de emociones
-        </li>
-        <li style="font-family:var(--font);font-size:1.2rem;color:var(--text-mid);display:flex;align-items:baseline;gap:0.75rem;">
-          <span style="color:var(--rosa);font-size:0.7rem;line-height:1.8;flex-shrink:0;">&#9670;</span>
-          Autocuidado y autoestima
-        </li>
-        <li style="font-family:var(--font);font-size:1.2rem;color:var(--text-mid);display:flex;align-items:baseline;gap:0.75rem;">
-          <span style="color:var(--rosa);font-size:0.7rem;line-height:1.8;flex-shrink:0;">&#9670;</span>
-          Reducción de la rumia y pensamientos intrusivos
-        </li>
-        <li style="font-family:var(--font);font-size:1.2rem;color:var(--text-mid);display:flex;align-items:baseline;gap:0.75rem;">
-          <span style="color:var(--rosa);font-size:0.7rem;line-height:1.8;flex-shrink:0;">&#9670;</span>
-          Afrontamiento de crisis personales (cambios vitales, duelos…)
-        </li>
-        <li style="font-family:var(--font);font-size:1.2rem;color:var(--text-mid);display:flex;align-items:baseline;gap:0.75rem;">
-          <span style="color:var(--rosa);font-size:0.7rem;line-height:1.8;flex-shrink:0;">&#9670;</span>
-          Mindfulness para la vida cotidiana
-        </li>
-        <li style="font-family:var(--font);font-size:1.2rem;color:var(--text-mid);display:flex;align-items:baseline;gap:0.75rem;">
-          <span style="color:var(--rosa);font-size:0.7rem;line-height:1.8;flex-shrink:0;">&#9670;</span>
-          Uso problemático de videojuegos
-        </li>
-      </ul>
-
-      <!-- Botones aquí dentro, en la columna derecha -->
       <div class="hero-actions" style="justify-content:flex-start;">
         <a href="#contacto" class="btn-primary">Cuéntame qué necesitas →</a>
         <a href="#sesiones" class="btn-secondary">Conoce el proyecto</a>
+      </div>
+    </div>
+
+    <!-- Columna derecha: grid de áreas de trabajo -->
+    <div class="hero-services-grid">
+      <div class="hero-service-card">
+        <span class="hero-service-card-icon">♡</span>
+        <span class="hero-service-card-label">Autocuidado y autoestima</span>
+      </div>
+      <div class="hero-service-card">
+        <span class="hero-service-card-icon">🧭</span>
+        <span class="hero-service-card-label">Afrontamiento de crisis<br><em style="font-size:0.88em;color:var(--plum-soft);">(cambios vitales, duelos…)</em></span>
+      </div>
+      <div class="hero-service-card">
+        <span class="hero-service-card-icon">🧘</span>
+        <span class="hero-service-card-label">Mindfulness para la vida cotidiana</span>
+      </div>
+      <div class="hero-service-card">
+        <span class="hero-service-card-icon">🌊</span>
+        <span class="hero-service-card-label">Gestión de emociones</span>
+      </div>
+      <div class="hero-service-card">
+        <span class="hero-service-card-icon">⚓</span>
+        <span class="hero-service-card-label">Afrontamiento de la rumia</span>
+      </div>
+      <div class="hero-service-card">
+        <span class="hero-service-card-icon">🎮</span>
+        <span class="hero-service-card-label">Uso problemático de videojuegos</span>
       </div>
     </div>
 

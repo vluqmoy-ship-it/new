@@ -147,7 +147,7 @@
     .nav-cta:hover { background: var(--rosa-pale) !important; }
 
     .hero {
-      min-height: 100vh;
+      min-height: auto;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -1089,57 +1089,29 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
-  <div class="hero-content" style="max-width:1100px;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:flex-start;text-align:left;">
+  <div class="hero-content" style="max-width:860px;text-align:center;">
 
-    <!-- Columna izquierda -->
-    <div>
-      <h1 class="hero-title">
-        Construye<br>
-        una vida<br>
-        con sentido
-      </h1>
-    </div>
+  <!-- Subtítulo superior: corto, en cursiva -->
+  <div class="hero-eyebrow">Terapia online</div>
 
-    <!-- Columna derecha -->
-    <div style="display:flex;flex-direction:column;gap:2rem;">
-      <p style="font-family:var(--font);font-size:1.6rem;font-weight:400;line-height:1.5;color:var(--plum-deep);font-style:italic;border-left:3px solid var(--rosa);padding-left:1.2rem;">
-        Acompañamiento y entrenamiento<br>en habilidades emocionales
-      </p>
-      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.85rem;">
-        <li style="font-family:var(--font);font-size:1.2rem;color:var(--text-mid);display:flex;align-items:baseline;gap:0.75rem;">
-          <span style="color:var(--rosa);font-size:0.7rem;line-height:1.8;flex-shrink:0;">&#9670;</span>
-          Gestión de emociones
-        </li>
-        <li style="font-family:var(--font);font-size:1.2rem;color:var(--text-mid);display:flex;align-items:baseline;gap:0.75rem;">
-          <span style="color:var(--rosa);font-size:0.7rem;line-height:1.8;flex-shrink:0;">&#9670;</span>
-          Autocuidado y autoestima
-        </li>
-        <li style="font-family:var(--font);font-size:1.2rem;color:var(--text-mid);display:flex;align-items:baseline;gap:0.75rem;">
-          <span style="color:var(--rosa);font-size:0.7rem;line-height:1.8;flex-shrink:0;">&#9670;</span>
-          Reducción de la rumia y pensamientos intrusivos
-        </li>
-        <li style="font-family:var(--font);font-size:1.2rem;color:var(--text-mid);display:flex;align-items:baseline;gap:0.75rem;">
-          <span style="color:var(--rosa);font-size:0.7rem;line-height:1.8;flex-shrink:0;">&#9670;</span>
-          Afrontamiento de crisis personales (cambios vitales, duelos…)
-        </li>
-        <li style="font-family:var(--font);font-size:1.2rem;color:var(--text-mid);display:flex;align-items:baseline;gap:0.75rem;">
-          <span style="color:var(--rosa);font-size:0.7rem;line-height:1.8;flex-shrink:0;">&#9670;</span>
-          Mindfulness para la vida cotidiana
-        </li>
-        <li style="font-family:var(--font);font-size:1.2rem;color:var(--text-mid);display:flex;align-items:baseline;gap:0.75rem;">
-          <span style="color:var(--rosa);font-size:0.7rem;line-height:1.8;flex-shrink:0;">&#9670;</span>
-          Uso problemático de videojuegos
-        </li>
-      </ul>
+  <!-- Título principal: lo más grande de la página -->
+  <h1 class="hero-title">
+    Acompañamiento y entrenamiento<br>en habilidades emocionales
+  </h1>
 
-      <!-- Botones aquí dentro, en la columna derecha -->
-      <div class="hero-actions" style="justify-content:flex-start;">
-        <a href="#contacto" class="btn-primary">Cuéntame qué necesitas →</a>
-        <a href="#sesiones" class="btn-secondary">Conoce el proyecto</a>
-      </div>
-    </div>
+  <!-- Subtítulo inferior: ligeramente más pequeño -->
+  <p class="hero-desc" style="font-style:italic; color:var(--plum-soft);">
+    Construye una vida con sentido
+  </p>
 
+  <!-- Botones -->
+  <div class="hero-actions">
+    <a href="#contacto" class="btn-primary">Cuéntame qué necesitas →</a>
+    <a href="#sesiones" class="btn-secondary">Conoce el proyecto</a>
   </div>
+
+</div>
+
 </section>
 
   <!-- ══════════════════════════════════════
